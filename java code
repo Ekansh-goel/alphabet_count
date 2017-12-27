@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class name_count {
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		String str;
+		char ch;
+		int sum = 0, final_sum = 0;
+		str = scn.nextLine();
+		for (int q = 0; q < str.length(); q++) {
+			ch = str.charAt(q);
+			if (ch == ' ') {
+				continue;
+			}
+			sum = (ch - 'a') + 1;
+			final_sum = sum + final_sum;
+		}
+		System.out.println(final_sum);
+		scn.close();
+	}
+}
