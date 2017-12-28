@@ -11,8 +11,14 @@ public class name_count {
 			if (ch == ' ') {
 				continue;
 			}
-			sum = (ch - 'a') + 1;
-			final_sum = sum + final_sum;
+			if (ch >= 'A' && ch <= 'Z') {
+				sum = (ch - 'A') + 1;
+				final_sum = sum + final_sum;
+			} 
+			else if (ch >= 'a' && ch <= 'z') {
+				sum = (ch - 'a') + 1;
+				final_sum = sum + final_sum;
+			}
 		}
 		System.out.println(final_sum);
 		scn.close();
